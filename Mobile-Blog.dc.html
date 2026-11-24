@@ -4,13 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PAUSA — Blog (mobile)</title>
-<script src="./_runtime/react.js"></script>
-<script src="./_runtime/react-dom.js"></script>
-<script src="./_runtime/support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;600&amp;family=Cormorant+Garamond:wght@300;400&amp;display=swap">
 <style>
 body{margin:0}
@@ -85,7 +78,10 @@ section h1,section h2,section p,.eyebrow{animation:fadeUp .8s cubic-bezier(.2,.7
 nav[aria-label="Principal"]{position:sticky;top:69px;z-index:39;max-height:calc(100vh - 69px);overflow-y:auto;box-shadow:0 14px 28px rgba(26,44,99,.25)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
-</helmet>
+</head>
+<body>
+<template id="dc-template">
+
 <div style="width:390px;max-width:100%;margin:0 auto;box-sizing:border-box;overflow:clip;background:#F4EFE7;color:#1A2C63;font-family:'Bricolage Grotesque',Arial,sans-serif;font-size:16px;line-height:1.6">
 <a class="promo" href="Mobile-Loja.dc.html" style="background:#76090D;color:#F4EFE7;min-height:44px;padding:0 12px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:13px;letter-spacing:.03em;white-space:nowrap;overflow:hidden;text-align:center;box-sizing:border-box"><span>Leve mais 1 kit e ganhe <strong style="font-weight:600">15% de desconto</strong></span><span aria-hidden="true">→</span></a>
 <header style="padding:12px 20px;border-bottom:1px solid #1A2C63;display:flex;align-items:center;justify-content:space-between;background:#F4EFE7">
@@ -129,7 +125,8 @@ nav[aria-label="Principal"]{position:sticky;top:69px;z-index:39;max-height:calc(
 <div style="display:flex;flex-direction:column;gap:2px;align-items:flex-start"><span style="font-size:15px">Seu hobby começa com uma pausa.</span><a href="https://www.instagram.com/pausa_br/" style="font-size:15px;letter-spacing:.04em;display:flex;align-items:center;min-height:44px">Instagram @pausa_br</a></div>
 </footer>
 </div>
-</x-dc>
+</template>
+<div id="dc-root"></div>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":3300}}'>
 class Component extends DCLogic {
 constructor(props) {
@@ -148,5 +145,6 @@ count: this.state.count
 }
 }
 </script>
+<script src="./js/pausa.js"></script>
 </body>
 </html>
